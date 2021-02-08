@@ -99,7 +99,6 @@ public class InvListener implements Listener {
             //Back a Page
 
             if (event.getSlot() == 48) {
-                if (event.getCurrentItem().equals(Material.IRON_HOE)) {
                     for (String tags : tagssection.getKeys(false)) {
                         String tagName = tags.substring( tags.lastIndexOf( "." ) + 1);
                         event.getClickedInventory().remove(Material.matchMaterial(Tags.getTagsConfig().getString(
@@ -150,7 +149,6 @@ public class InvListener implements Listener {
 
                     }
 
-                }
             }
 
             //Back a page End
