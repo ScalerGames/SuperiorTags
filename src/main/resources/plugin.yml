@@ -1,0 +1,9 @@
+main: me.scalergames.SuperiorTags.Main
+name: SuperiorTags
+version: ALPHA-1
+author: ScalerGames
+description: A Minecraft tags plugin
+api-version: 1.13
+softdepend: [PlaceholderAPI]
+commands:
+  tags:

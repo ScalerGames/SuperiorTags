@@ -1,0 +1,12 @@
+me\scalergames\SuperiorTags\Main.class
+me\scalergames\SuperiorTags\listener\Chat.class
+me\scalergames\SuperiorTags\menu\InvListener.class
+me\scalergames\SuperiorTags\utils\Color.class
+me\scalergames\SuperiorTags\listener\OnJoin.class
+me\scalergames\SuperiorTags\commands\TagsCompleter.class
+me\scalergames\SuperiorTags\files\Config.class
+me\scalergames\SuperiorTags\files\Data.class
+me\scalergames\SuperiorTags\Placeholders.class
+me\scalergames\SuperiorTags\files\Tags.class
+me\scalergames\SuperiorTags\commands\TagsCMD.class
+me\scalergames\SuperiorTags\files\Lang.class
