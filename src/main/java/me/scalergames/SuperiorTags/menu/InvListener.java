@@ -96,6 +96,67 @@ public class InvListener implements Listener {
 
             //Create New Page End
 
+            //Back a Page
+
+            if (event.getSlot() == 48) {
+                if (event.getCurrentItem().equals(Material.IRON_HOE)) {
+                    for (String tags : tagssection.getKeys(false)) {
+                        String tagName = tags.substring( tags.lastIndexOf( "." ) + 1);
+                        event.getClickedInventory().remove(Material.matchMaterial(Tags.getTagsConfig().getString(
+                                "SuperiorTags.tags." + tagName + ".item")));
+                    }
+
+                    ItemStack item = new ItemStack(Material.IRON_HOE);
+                    ItemMeta meta = item.getItemMeta();
+                    int slot = 0;
+
+                    for (String tags : tagssection.getKeys(false)) {
+
+                        String tagName = tags.substring( tags.lastIndexOf( "." ) + 1);
+                        List<String> taglore = new ArrayList<String>();
+                        if (p.hasPermission(Tags.getTagsConfig().getString("SuperiorTags.tags." + tagName + ".permission"))) {
+                            if (!(slot >= 45)) {
+
+                                try {
+                                    item.setType(Material.matchMaterial(Tags.getTagsConfig()
+                                            .getString("SuperiorTags.tags." + tagName + ".item")));
+                                } catch (Exception e) {
+                                    item.setType(Material.RED_STAINED_GLASS_PANE);
+                                    taglore.add(Color.format("&4&lInvalid Item ID"));
+                                }
+                                meta.setDisplayName(Color.format(Main.getInstance().getConfig().getString("IdentifierColor") +
+                                        Main.getInstance().getConfig().getString("Identifier")
+                                        + Tags.getTagsConfig().getString("SuperiorTags.tags." + tagName + ".tag")));
+                                taglore.add(Color.format(Tags.getTagsConfig().getString("SuperiorTags.tags." + tagName + ".description")));
+                                taglore.add(tagName);
+                                meta.setLore(taglore);
+                                item.setItemMeta(meta);
+                                event.getClickedInventory().setItem(slot, item);
+                                slot++;
+
+
+                            } else {
+
+                                item.setType(Material.ARROW);
+                                meta.setDisplayName(Color.format("&9Next ->"));
+                                taglore.clear();
+                                meta.setLore(taglore);
+                                item.setItemMeta(meta);
+                                event.getClickedInventory().setItem(50, item);
+
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+
+            //Back a page End
+
+
+
             if (!(event.getCurrentItem() == null)) {
 
                 event.setCancelled(true);
