@@ -1,6 +1,7 @@
 package me.scalergames.SuperiorTags.files;
 
 import me.scalergames.SuperiorTags.Main;
+import me.scalergames.SuperiorTags.utils.Color;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -58,10 +59,13 @@ public class Tags {
         if (!tagsFile.exists()) {
             Main.getInstance().saveResource("tags.yml", false);
             Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.tag", "&8&l[&3&lSuperiorTags&8&l]");
-            Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.description", "The official SuperiorTags Tag");
+            String[] list = {"&3This is the official Superior Tag", "&9superiormc.co.uk"};
+            Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.lore", list);
             Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.permission", "superiortags.tag.superiortags");
             Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.item", "PAPER");
             Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.effects", "none");
+            String[] enchants = {  "DIG_SPEED:1:HIDE_ENCHANTS"};
+            Tags.getTagsConfig().set("SuperiorTags.tags.superiortags.enchantments", enchants);
             Tags.saveTags();
         }
     }

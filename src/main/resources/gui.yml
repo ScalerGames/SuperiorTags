@@ -1,0 +1,36 @@
+GUI:
+  Title: ""
+  Tags-Layout:
+    Name: "Tag: {identifier}"
+    Tag: "{tag}"
+    Equipped: "&aEquipped"
+    Non-Equipped: "&fClick to equip this tag"
+  Layout:
+    placeholder:
+      type: CYAN_STAINED_GLASS_PANE
+      slots:
+        - 52
+        - 51
+        - 47
+        - 46
+        - 45
+      name: "&f"
+    current-tag:
+      type: PLAYER_HEAD
+      owner: player
+      slot: 49
+      name: "&9Current Tag: "
+      lore:
+        - "%superiortags_tag%"
+    close-button:
+      type: BARRIER
+      slot: 53
+      name: "&cClose"
+    next-page:
+      type: ARROW
+      slot: 50
+      name: "&9Next ->"
+    previous-page:
+      type: IRON_HOE
+      slot: 48
+      name: "&9<- Back"

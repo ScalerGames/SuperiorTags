@@ -6,7 +6,7 @@
 
     <groupId>me.scalergames</groupId>
     <artifactId>SuperiorTags</artifactId>
-    <version>ALPHA-1</version>
+    <version>ALPHA-2</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -22,6 +22,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>HeadDatabase-API</id>
+            <url>https://mvn.intellectualsites.com/content/repositories/thirdparty/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -35,6 +39,12 @@
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.9.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.arcaniax</groupId>
+            <artifactId>HeadDatabase-API</artifactId>
+            <version>1.1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

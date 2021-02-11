@@ -15,10 +15,8 @@ public class Config {
         config = Main.getInstance().getConfig();
         //Add Default
         config.addDefault("Prefix", "&8&l[&3&lSuperiorTags&8&l] ");
-        config.addDefault("Title", "Tags Menu");
-        config.addDefault("TitleColor", "&3&l");
-        config.addDefault("Identifier", "Tag: ");
-        config.addDefault("IdentifierColor", "&3");
+        config.addDefault("Title", "&3&lTags Menu");
+        config.addDefault("Identifier", "&3Tag");
         config.addDefault("DefaultItem", "PAPER");
         //End Default
         Main.getInstance().saveDefaultConfig();

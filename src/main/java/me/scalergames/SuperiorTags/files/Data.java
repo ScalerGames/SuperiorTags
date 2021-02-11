@@ -59,8 +59,6 @@ public class Data {
 
         if (!dataFile.exists()) {
             Main.getInstance().saveResource("data.yml", false);
-            getDataConfig().set("TagsCount", 1);
-            saveData();
         }
     }
 
